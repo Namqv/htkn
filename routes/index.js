@@ -86,9 +86,8 @@ router.post('/facebook', function(req, res, next) {
 						////receivedDeliveryConfirmation(messagingEvent);
 					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'getstarted') {
 						//present user with some greeting or call to action
-						client.sendMessage(senderID, 'Xin chào, mình là trợ lý ảo của Hành trình Thanh niên Khởi nghiệp Đổi mới Sáng tạo của Hội LHTN Việt Nam! Mình sẽ mang đến cho bạn một cơ hội vừa được trang bị kiến thức và kinh nghiệm khởi nghiệp, vừa được đi du lịch miễn phí đấy, hãy cùng khám phá bước tiếp theo nhé:').then(()=>{
-							client.sendMessage(senderID, '1');
-						});
+						client.sendMessage(senderID, {  text: 'Xin chào, bạn đã kết nối đến Hành Trình Thanh Niên Khởi Nghiệp ĐMST',});
+						
 					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'confirm') {
 						//present user 'confirm':				
 						//sendMessageConfimRegister(messagingEvent.sender.id);
