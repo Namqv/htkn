@@ -86,7 +86,19 @@ router.post('/facebook', function(req, res, next) {
 						////receivedDeliveryConfirmation(messagingEvent);
 					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'getstarted') {
 						//present user with some greeting or call to action
-						client.sendMessage(senderID, 'Xin chào, mình là trợ lý ảo của Hành trình Thanh niên Khởi nghiệp Đổi mới Sáng tạo của Hội LHTN Việt Nam! Mình sẽ mang đến cho bạn một cơ hội vừa được trang bị kiến thức và kinh nghiệm khởi nghiệp, vừa được đi du lịch miễn phí đấy, hãy cùng khám phá bước tiếp theo nhé:');
+						client.sendText(senderID, 'Bạn đến với Hoa Khôi Sinh Viên 2018 với vai trò gì nhỉ?', {
+                            quick_replies: [{
+                                content_type: 'text',
+                                title: 'Thí sinh',
+                                payload: 'candidate',
+                                ///image_url: SERVER_URL + "/images/miss.png"
+                            }, {
+                                content_type: 'text',
+                                title: 'Người quan tâm',
+                                payload: 'journalist',
+                                //    image_url: SERVER_URL + "/images/audience.png"
+                            }],
+                        });
 					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'confirm') {
 						//present user 'confirm':				
 						//sendMessageConfimRegister(messagingEvent.sender.id);
