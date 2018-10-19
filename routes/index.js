@@ -142,7 +142,7 @@ router.post('/facebook', function(req, res, next) {
 						});
 
 					}else if (messagingEvent.postback && messagingEvent.postback.payload == 'TTHT'){
-						client.sendImage(senderID,SERVER_URL + "/Hình mô tả Hành trình Update.png").then(() => {
+						client.sendImage(senderID,SERVER_URL + "images/Hình mô tả Hành trình Update.png").then(() => {
 							client.sendText(senderID,'Hành trình quy tụ 100 bạn trẻ/nhóm khởi nghiệp với những ý tưởng sáng tạo xuất sắc nhất sẽ cùng tham gia các hoạt động, sự kiện thực tiễn đầy thú vị, bổ ích. Cùng khám phá các game thực tế của Hành trình ngay nào! ',{
 								quick_replies: [{
 								content_type: 'text',
