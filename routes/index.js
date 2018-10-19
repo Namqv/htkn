@@ -157,8 +157,8 @@ router.post('/facebook', function(req, res, next) {
 								//	image_url: SERVER_URL + "/images/audience.png"
 							},{
 								content_type: 'text',
-								title: 'Sàn giao dịch thực tế',
-								payload: 'SGDTT',
+								title: 'Sàn GD ý tưởng',
+								payload: 'SGDYT',
 							}],
 
 							})
