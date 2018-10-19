@@ -97,7 +97,7 @@ router.post('/facebook', function(req, res, next) {
 								},{
 									type: 'postback',
 									title: 'Tìm hiểu thông tin',
-									payload; 'start2'
+									payload: 'start2',
 								} ],
 
 							})
