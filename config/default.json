@@ -2,7 +2,7 @@
 	"appSecret": "",	
 	"pageAccessToken":"",
 	"validationToken": "",
-	"serverURL": "https://hksv2018.herokuapp.com/",	
+	"serverURL": "https://httnkn.herokuapp.com/",	
 	"mongoUrl":"",
 	"databasename":"hksv"
 }
