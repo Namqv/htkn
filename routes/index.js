@@ -92,17 +92,54 @@ router.post('/facebook', function(req, res, next) {
 							buttons: [{
 								type: 'postback',
 								title: 'Đăng ký ngay',
-								payload: 'start1',
+								payload: 'DKY',
 							},{
 								type: 'postback',
 								title: 'Tìm hiểu thông tin',
-								payload: 'start2',
+								payload: 'THTT',
 							} ],
 
 						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'confirm') {
-						//present user 'confirm':				
-						//sendMessageConfimRegister(messagingEvent.sender.id);
+					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'THTT') {
+						client.sendTemplate(senderID,{
+							template_type: 'button',
+							text: 'Nếu bạn là người đang có ý tưởng, dự án khởi nghiệp thì đây chính là cuộc hành trình dành cho bạn. Hãy cùng khám phá những điều Hành trình có thể mang lại cho bạn nhé!',
+							buttons: [{
+								type: 'postback',
+								title: 'Thông tin hàn trình',
+								payload: 'TTHT',
+							},],
+
+						},{
+							quick_replies: [{
+								content_type: 'text',
+								title: 'Nhà đầu tư',
+								payload: 'NDT',
+								///image_url: SERVER_URL + "/images/miss.png"
+							}, {
+								content_type: 'text',
+								title: 'Chuyên gia cố vấn',
+								payload: 'CGCV',
+								//	image_url: SERVER_URL + "/images/audience.png"
+							},{
+								content_type: 'text',
+								title: 'Đi thực tế',
+								payload: 'DTT',
+							},{
+								content_type: 'text',
+								title: 'Gặp lãnh đạo',
+								payload: 'gLD',
+							},{
+								content_type: 'text',
+								title: 'Quảng bá sản phẩm',
+								payload: 'QBSP',
+							},{
+								content_type: 'text',
+								title: 'Xem thêm',
+								payload: 'XT',
+							}],
+
+						});
 
 					} else {
 						console.log("Facebook Webhook received unknown messagingEvent: ", messagingEvent);
