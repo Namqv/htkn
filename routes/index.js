@@ -223,12 +223,12 @@ function receivedMessage(event) {
 		console.log("Received echo for message %s and app %d with metadata %s",
 			messageId, appId, metadata);
 		return;
-	} else if (quickReply) {
+	} else if (messageText) {
 		
 		client.sendText(senderID, 'Hello! quickReply', { tag: 'ISSUE_RESOLUTION' });
 	
-	}else if (messageText) {
-		switch (messageText.toLowerCase()) {
+	}else if (quickReply) {
+		switch (quickReply.toLowerCase()) {
 			case 'nhà đầu tư':
 				client.sendText(senderID,'Bạn có cơ hội được gặp gỡ các nhà đầu tư, tiếp cận quỹ đầu tư qua các buổi hội thảo, các sự kiện giao lưu, tọa đàm tại các địa phương, các hoạt động thực tế diễn ra trong suốt Hành trình.',{
 							quick_replies: [{
