@@ -316,7 +316,6 @@ function receivedMessage(event) {
 								///image_url: SERVER_URL + "/images/miss.png"
 							}]
 						});
-					} el
 				break;
 			case 'sàn gd ý tưởng':
 				client.sendText(senderID,'Với game "Sàn giao dịch ý tưởng", mỗi bạn sẽ quay video trình bày về ý tưởng của mình (dài khoảng 3 phút) và được  trình chiếu trong các hoạt động tại 11 tỉnh/ thành phố Hành trình đi qua và trên các kênh của Ban Tổ chức.').then(() => {
