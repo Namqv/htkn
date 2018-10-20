@@ -162,113 +162,6 @@ router.post('/facebook', function(req, res, next) {
 
 							});
 						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'NDT'){
-						client.sendText(senderID,'Bạn có cơ hội được gặp gỡ các nhà đầu tư, tiếp cận quỹ đầu tư qua các buổi hội thảo, các sự kiện giao lưu, tọa đàm tại các địa phương, các hoạt động thực tế diễn ra trong suốt Hành trình.',{
-							quick_replies: [{
-								content_type: 'text',
-								title: 'Tìm hiểu thêm',
-								payload: 'THT',
-								///image_url: SERVER_URL + "/images/miss.png"
-							}]
-						});
-
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'CGCV'){
-						client.sendText(senderID,'Các chuyên gia cố vấn từ các tập đoàn, doanh nghiệp, các startup tiêu biểu trong mọi lĩnh vực sẽ tư vấn, hỗ trợ, chia sẻ kinh nghiệm làm startup, các phương diện quản lý, kinh doanh thương mại,... từ những thành công và thất bại của họ.').then(() => {
-							client.sendText(senderID,'Thật đáng mong đợi phải không nào :d . Ban tổ chức sẽ sớm bật mí "Họ là ai ?" nhé!',{
-								quick_replies: [{
-									content_type: 'text',
-									title: 'Tìm hiểu thêm',
-									payload: 'THT',
-									///image_url: SERVER_URL + "/images/miss.png"
-								}]
-							});
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'DTT'){
-						client.sendText(senderID,'Cùng với các chương trình "giao lưu, tọa đàm, hội thảo tại địa phương" bạn sẽ được mắt thấy, tai nghe, được trải nghiệm thực tế tại các mô hình startup tiêu biểu, các tập đoàn, doanh nghiệp lớn tại 11 điểm dừng trong Hành trình.').then(() => {
-							client.sendText(senderID,'Bạn sẽ hiểu rõ hơn về quy trình sản xuất/ canh tác, cơ cấu tổ chức sản xuất/ nhân sự, quản trị các nguồn lực, các tiêu chuẩn, quy chuẩn sản phẩm,… trong các lĩnh vực khác nhau như nông nghiệp, công nghiệp, xây dựng, dịch vụ, công nghệ, du lịch, y tế,…',{
-								quick_replies: [{
-									content_type: 'text',
-									title: 'Tìm hiểu thêm',
-									payload: 'THT',
-									///image_url: SERVER_URL + "/images/miss.png"
-								}]
-							});
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'GLD'){
-						client.sendText(senderID,'Mỗi điểm dừng chân trong Hành trình, bạn sẽ được gặp các lãnh đạo tỉnh/ thành phố, có cơ hội mở rộng mối quan hệ hợp tác, hiểu rõ hơn về các chính sách tại địa phương, là bước đệm trong phát triển, mở rộng dự án trong tương lai',{
-							quick_replies: [{
-								content_type: 'text',
-								title: 'Tìm hiểu thêm',
-								payload: 'THT',
-								///image_url: SERVER_URL + "/images/miss.png"
-							}]
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'QBSP'){
-						client.sendText(senderID,'Với "Sàn giao dịch ý tưởng" và "Hội chợ các sản phẩm khởi nghiệp đổi mới sáng tạo" video về ý tưởng của bạn sẽ được trình chiếu trong các hoạt động tại 11 địa điểm của Hành trình, trên các kênh của BTC, các sản phẩm khởi nghiệp sẽ được trưng bày trong hội chợ - nơi gặp gỡ giao lưu của các ý tưởng sáng tạo tuyệt vời.').then(() => {
-							client.sendText(senderID,'Có thể mở rộng mối quan hệ, gặp những bạn trẻ cùng chí hướng, được quảng bá sản phẩm trên các phương tiện thông tin đại chúng hoàn toàn miễn phí. Bạn sẽ không bỏ lỡ cơ hội tuyệt vời này, phải không nào ',{
-								quick_replies: [{
-									content_type: 'text',
-									title: 'Tìm hiểu thêm',
-									payload: 'THT',
-									///image_url: SERVER_URL + "/images/miss.png"
-								}]
-							});
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'XT'){
-						client.sendText(senderID,'Tham gia "Diễn đàn Thanh niên khởi nghiệp đổi mới sáng tạo trong kỷ nguyên 4.0” bạn được đưa ra kiến nghị, đề xuất các cơ chế, chính sách với chính phủ, được hiểu rõ hơn về các chính sách của Đảng và Nhà nước đối với vấn đề khởi nghiệp đổi mới sáng tạo của các của doanh nghiệp khởi nghiệp và các nhà đầu tư, các nhà tư vấn…',{
-							quick_replies: [{
-								content_type: 'text',
-								title: 'Tìm hiểu thêm',
-								payload: 'THT',
-								///image_url: SERVER_URL + "/images/miss.png"
-							}]
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'CKN'){
-						client.sendText(senderID,'Với game "Cùng nhau khởi nghiệp", 100 thành viên được chia thành 10 đội, dưới sự hỗ trợ và tư vấn của các chuyên gia cố vấn sẽ cùng nhau lập kế hoạch, đưa ra phương án kinh doanh để cùng thực hiện trong suốt Hành trình').then(() => {
-							client.sendText(senderID,' Ngày 28/11/2018, tại điểm cuối của Hành trình (Đà Nẵng) các đội sẽ giới thiệu và bảo vệ dự án. Hội đồng giám khảo và các Nhà đầu tư sẽ lựa chọn 3 dự án xuất sắc nhất để trao giải thưởng và vinh danh. ',{
-								quick_replies: [{
-									content_type: 'text',
-									title: 'Tìm hiểu thêm',
-									payload: 'THT',
-									///image_url: SERVER_URL + "/images/miss.png"
-								}]
-							});
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'DNTD'){
-						client.sendText(senderID,'Với game "Trải nghiệm một ngày làm Doanh nhân", các chuyên gia sẽ đào tạo kỹ năng, hướng dẫn và tư vấn cho các doanh nhân tập sự từ tác phong đi lại, ăn uống, giao tiếp, trang phục … những phong thái của một doanh nhân thành đạt.',{
-							quick_replies: [{
-								content_type: 'text',
-								title: 'Tìm hiểu thêm',
-								payload: 'THT',
-								///image_url: SERVER_URL + "/images/miss.png"
-							}]
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'SGDYT'){
-						client.sendText(senderID,'Với game "Sàn giao dịch ý tưởng", mỗi bạn sẽ quay video trình bày về ý tưởng của mình (dài khoảng 3 phút) và được  trình chiếu trong các hoạt động tại 11 tỉnh/ thành phố Hành trình đi qua và trên các kênh của Ban Tổ chức.').then(() => {
-							client.sendText(senderID,'  Đây sẽ là một cơ hội tuyệt vời cho bạn trau chuốt ý tưởng, quảng bá, phát triển dự án và kêu gọi đầu tư phải không nào .',{
-								quick_replies: [{
-									content_type: 'text',
-									title: 'Tìm hiểu thêm',
-									payload: 'THT',
-									///image_url: SERVER_URL + "/images/miss.png"
-								}]
-							});
-						});
-					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'THT'){
-						client.sendTemplate(senderID,{
-							template_type: 'button',
-							text: 'Xin chào, mình là trợ lý ảo của Hành trình Thanh niên Khởi nghiệp Đổi mới Sáng tạo của Hội LHTN Việt Nam! Mình sẽ mang đến cho bạn một cơ hội vừa được trang bị kiến thức và kinh nghiệm khởi nghiệp, vừa được đi du lịch miễn phí đấy, hãy cùng khám phá bước tiếp theo nhé:',
-							buttons: [{
-								type: 'postback',
-								title: 'Đăng ký ngay',
-								payload: 'DKY',
-							},{
-								type: 'postback',
-								title: 'Tìm hiểu thông tin',
-								payload: 'THTT',
-							} ],
-
-						});
 					} else {
 						console.log("Facebook Webhook received unknown messagingEvent: ", messagingEvent);
 					}
@@ -336,17 +229,122 @@ function receivedMessage(event) {
 	
 	}else if (messageText) {
 		switch (messageText.toLowerCase()) {
-			case 'giá xe':
-				client.sendMessage(senderID, {  text: 'Hanoi (KV1) -> Noibai: 200k,Noibai -> Hanoi (KV1): 250k',});
-				client.sendAttachment(senderID, {
-				  type: 'image',
-				  payload: {
-					url: 'https://scontent.fhan3-2.fna.fbcdn.net/v/t1.0-9/31081528_568961726811775_3035050846015455232_n.jpg?_nc_cat=0&oh=275c0f15fc0d56e03fee30afc9bea818&oe=5C060612',
-				  },
-				});
+			case 'nhà đầu tư':
+				client.sendText(senderID,'Bạn có cơ hội được gặp gỡ các nhà đầu tư, tiếp cận quỹ đầu tư qua các buổi hội thảo, các sự kiện giao lưu, tọa đàm tại các địa phương, các hoạt động thực tế diễn ra trong suốt Hành trình.',{
+							quick_replies: [{
+								content_type: 'text',
+								title: 'Tìm hiểu thêm',
+								payload: 'THT',
+								///image_url: SERVER_URL + "/images/miss.png"
+							}]
+						});
 				break;
-			case 'liên hệ':
-				client.sendMessage(senderID, {  text: 'MKmart hotline: 091.128.5465 / 1900545465!',});
+			case 'chuyên gia cố vấn':
+				client.sendText(senderID,'Các chuyên gia cố vấn từ các tập đoàn, doanh nghiệp, các startup tiêu biểu trong mọi lĩnh vực sẽ tư vấn, hỗ trợ, chia sẻ kinh nghiệm làm startup, các phương diện quản lý, kinh doanh thương mại,... từ những thành công và thất bại của họ.').then(() => {
+							client.sendText(senderID,'Thật đáng mong đợi phải không nào :d . Ban tổ chức sẽ sớm bật mí "Họ là ai ?" nhé!',{
+								quick_replies: [{
+									content_type: 'text',
+									title: 'Tìm hiểu thêm',
+									payload: 'THT',
+									///image_url: SERVER_URL + "/images/miss.png"
+								}]
+							});
+						});
+				break;
+			case 'đi thực tế':
+				client.sendText(senderID,'Cùng với các chương trình "giao lưu, tọa đàm, hội thảo tại địa phương" bạn sẽ được mắt thấy, tai nghe, được trải nghiệm thực tế tại các mô hình startup tiêu biểu, các tập đoàn, doanh nghiệp lớn tại 11 điểm dừng trong Hành trình.').then(() => {
+							client.sendText(senderID,'Bạn sẽ hiểu rõ hơn về quy trình sản xuất/ canh tác, cơ cấu tổ chức sản xuất/ nhân sự, quản trị các nguồn lực, các tiêu chuẩn, quy chuẩn sản phẩm,… trong các lĩnh vực khác nhau như nông nghiệp, công nghiệp, xây dựng, dịch vụ, công nghệ, du lịch, y tế,…',{
+								quick_replies: [{
+									content_type: 'text',
+									title: 'Tìm hiểu thêm',
+									payload: 'THT',
+									///image_url: SERVER_URL + "/images/miss.png"
+								}]
+							});
+						});
+				break;
+			case 'gặp lãnh đạo':
+				client.sendText(senderID,'Mỗi điểm dừng chân trong Hành trình, bạn sẽ được gặp các lãnh đạo tỉnh/ thành phố, có cơ hội mở rộng mối quan hệ hợp tác, hiểu rõ hơn về các chính sách tại địa phương, là bước đệm trong phát triển, mở rộng dự án trong tương lai',{
+							quick_replies: [{
+								content_type: 'text',
+								title: 'Tìm hiểu thêm',
+								payload: 'THT',
+								///image_url: SERVER_URL + "/images/miss.png"
+							}]
+						});
+				break;
+			case 'quảng bá sản phẩm':
+				client.sendText(senderID,'Với "Sàn giao dịch ý tưởng" và "Hội chợ các sản phẩm khởi nghiệp đổi mới sáng tạo" video về ý tưởng của bạn sẽ được trình chiếu trong các hoạt động tại 11 địa điểm của Hành trình, trên các kênh của BTC, các sản phẩm khởi nghiệp sẽ được trưng bày trong hội chợ - nơi gặp gỡ giao lưu của các ý tưởng sáng tạo tuyệt vời.').then(() => {
+							client.sendText(senderID,'Có thể mở rộng mối quan hệ, gặp những bạn trẻ cùng chí hướng, được quảng bá sản phẩm trên các phương tiện thông tin đại chúng hoàn toàn miễn phí. Bạn sẽ không bỏ lỡ cơ hội tuyệt vời này, phải không nào ',{
+								quick_replies: [{
+									content_type: 'text',
+									title: 'Tìm hiểu thêm',
+									payload: 'THT',
+									///image_url: SERVER_URL + "/images/miss.png"
+								}]
+							});
+						});
+				break;
+			case 'xem thêm':
+				client.sendText(senderID,'Tham gia "Diễn đàn Thanh niên khởi nghiệp đổi mới sáng tạo trong kỷ nguyên 4.0” bạn được đưa ra kiến nghị, đề xuất các cơ chế, chính sách với chính phủ, được hiểu rõ hơn về các chính sách của Đảng và Nhà nước đối với vấn đề khởi nghiệp đổi mới sáng tạo của các của doanh nghiệp khởi nghiệp và các nhà đầu tư, các nhà tư vấn…',{
+							quick_replies: [{
+								content_type: 'text',
+								title: 'Tìm hiểu thêm',
+								payload: 'THT',
+								///image_url: SERVER_URL + "/images/miss.png"
+							}]
+						});
+				break;
+			case 'cùng khởi nghiệp':
+				client.sendText(senderID,'Với game "Cùng nhau khởi nghiệp", 100 thành viên được chia thành 10 đội, dưới sự hỗ trợ và tư vấn của các chuyên gia cố vấn sẽ cùng nhau lập kế hoạch, đưa ra phương án kinh doanh để cùng thực hiện trong suốt Hành trình').then(() => {
+							client.sendText(senderID,' Ngày 28/11/2018, tại điểm cuối của Hành trình (Đà Nẵng) các đội sẽ giới thiệu và bảo vệ dự án. Hội đồng giám khảo và các Nhà đầu tư sẽ lựa chọn 3 dự án xuất sắc nhất để trao giải thưởng và vinh danh. ',{
+								quick_replies: [{
+									content_type: 'text',
+									title: 'Tìm hiểu thêm',
+									payload: 'THT',
+									///image_url: SERVER_URL + "/images/miss.png"
+								}]
+							});
+						});
+				break;
+			case 'doanh nhân thành đạt':
+				client.sendText(senderID,'Với game "Trải nghiệm một ngày làm Doanh nhân", các chuyên gia sẽ đào tạo kỹ năng, hướng dẫn và tư vấn cho các doanh nhân tập sự từ tác phong đi lại, ăn uống, giao tiếp, trang phục … những phong thái của một doanh nhân thành đạt.',{
+							quick_replies: [{
+								content_type: 'text',
+								title: 'Tìm hiểu thêm',
+								payload: 'THT',
+								///image_url: SERVER_URL + "/images/miss.png"
+							}]
+						});
+					} el
+				break;
+			case 'sàn gd ý tưởng':
+				client.sendText(senderID,'Với game "Sàn giao dịch ý tưởng", mỗi bạn sẽ quay video trình bày về ý tưởng của mình (dài khoảng 3 phút) và được  trình chiếu trong các hoạt động tại 11 tỉnh/ thành phố Hành trình đi qua và trên các kênh của Ban Tổ chức.').then(() => {
+							client.sendText(senderID,'  Đây sẽ là một cơ hội tuyệt vời cho bạn trau chuốt ý tưởng, quảng bá, phát triển dự án và kêu gọi đầu tư phải không nào .',{
+								quick_replies: [{
+									content_type: 'text',
+									title: 'Tìm hiểu thêm',
+									payload: 'THT',
+									///image_url: SERVER_URL + "/images/miss.png"
+								}]
+							});
+						});
+				break;
+			case 'tìm hiểu thêm':
+				client.sendTemplate(senderID,{
+							template_type: 'button',
+							text: 'Xin chào, mình là trợ lý ảo của Hành trình Thanh niên Khởi nghiệp Đổi mới Sáng tạo của Hội LHTN Việt Nam! Mình sẽ mang đến cho bạn một cơ hội vừa được trang bị kiến thức và kinh nghiệm khởi nghiệp, vừa được đi du lịch miễn phí đấy, hãy cùng khám phá bước tiếp theo nhé:',
+							buttons: [{
+								type: 'postback',
+								title: 'Đăng ký ngay',
+								payload: 'DKY',
+							},{
+								type: 'postback',
+								title: 'Tìm hiểu thông tin',
+								payload: 'THTT',
+							} ],
+
+						});
 				break;
 			default:
 			client.sendText(senderID, 'Hello! messageText', { tag: 'ISSUE_RESOLUTION' });
