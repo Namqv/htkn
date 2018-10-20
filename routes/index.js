@@ -224,7 +224,7 @@ function receivedMessage(event) {
 			messageId, appId, metadata);
 		return;
 	} else if (quickReply) {
-		switch (quickReply.toLowerCase()) {
+		switch (messageText.toLowerCase()) {
 			case 'nhà đầu tư':
 				client.sendText(senderID,'Bạn có cơ hội được gặp gỡ các nhà đầu tư, tiếp cận quỹ đầu tư qua các buổi hội thảo, các sự kiện giao lưu, tọa đàm tại các địa phương, các hoạt động thực tế diễn ra trong suốt Hành trình.',{
 							quick_replies: [{
