@@ -162,6 +162,22 @@ router.post('/facebook', function(req, res, next) {
 
 							});
 						});
+					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'DKY'){
+						client.sendSenderAction(senderID, 'typing_on').then(() => {
+								client.sendTemplate(senderID,{
+								template_type: 'button',
+								text: 'Mình có thể gọi bạn là gì nhỉ? Cho mình biết tên đầy đủ của bạn để tiện xưng hô được chứ?',
+								buttons: [{
+									type: 'postback',
+									title: 'Sẵn sàng',
+									payload: 'DKY',
+								}]
+							}).then(() => {
+								client.sendSenderAction(senderID, 'typing_on').then(() => {
+									client.sendText(senderID, 'Mình có thể gọi bạn là gì nhỉ? Cho mình biết tên đầy đủ của bạn để tiện xưng hô được chứ?(Nhập họ tên đầy đủ của bạn vào ô chat nhé)');
+								});
+							});
+						});
 					} else {
 						console.log("Facebook Webhook received unknown messagingEvent: ", messagingEvent);
 					}
