@@ -101,7 +101,6 @@ router.post('/facebook', function(req, res, next) {
 
 						});
 					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'THTT') {
-						
 						client.sendTemplate(senderID,{
 							template_type: 'button',
 							text: 'Nếu bạn là người đang có ý tưởng, dự án khởi nghiệp thì đây chính là cuộc hành trình dành cho bạn. Hãy cùng khám phá những điều Hành trình có thể mang lại cho bạn nhé!',
