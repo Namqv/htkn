@@ -163,7 +163,6 @@ router.post('/facebook', function(req, res, next) {
 							});
 						});
 					} else if (messagingEvent.postback && messagingEvent.postback.payload == 'DKY'){
-						console.log('dkyhhhhh');
 						client.sendSenderAction(senderID, 'typing_on').then(() => {
 								client.sendTemplate(senderID,{
 								template_type: 'button',
